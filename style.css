@@ -11,7 +11,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 min-height:100vh;
-padding:20px;
+padding:15px;
 }
 
 .container{
@@ -31,13 +31,13 @@ color:#fff;
 }
 
 header h1{
-font-size:30px;
+font-size:32px;
 margin-bottom:8px;
 }
 
 header p{
+font-size:16px;
 opacity:.9;
-font-size:15px;
 }
 
 #chat-box{
@@ -49,12 +49,12 @@ background:#0f172a;
 
 .bot-message,
 .user-message{
-padding:14px 18px;
-margin-bottom:15px;
-border-radius:15px;
 max-width:85%;
+padding:14px 18px;
+border-radius:15px;
+margin-bottom:15px;
 line-height:1.6;
-word-wrap:break-word;
+word-break:break-word;
 }
 
 .bot-message{
@@ -70,50 +70,78 @@ margin-left:auto;
 
 .input-area{
 display:flex;
+align-items:center;
+gap:10px;
 padding:15px;
 background:#111827;
-gap:10px;
 }
 
-input{
+.input-area input{
 flex:1;
+min-width:0;
 padding:15px;
 border:none;
 outline:none;
 border-radius:12px;
-font-size:16px;
 background:#1e293b;
 color:#fff;
+font-size:16px;
 }
 
-button{
-padding:15px 25px;
+.input-area button{
+width:90px;
+height:50px;
 border:none;
 border-radius:12px;
 background:#2563eb;
 color:#fff;
-font-size:16px;
+font-size:15px;
 font-weight:600;
 cursor:pointer;
-transition:.3s;
+flex-shrink:0;
 }
 
-button:hover{
+.input-area button:hover{
 background:#1d4ed8;
 }
 
 @media(max-width:600px){
 
+.container{
+border-radius:15px;
+}
+
+header{
+padding:20px;
+}
+
 header h1{
-font-size:24px;
+font-size:26px;
+}
+
+header p{
+font-size:14px;
 }
 
 #chat-box{
 height:380px;
-}
-
-button{
 padding:15px;
 }
 
-  }
+.input-area{
+padding:12px;
+gap:8px;
+}
+
+.input-area input{
+padding:14px;
+font-size:15px;
+}
+
+.input-area button{
+width:75px;
+height:48px;
+font-size:14px;
+}
+
+}
